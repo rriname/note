@@ -51,6 +51,16 @@ AWSアカウントのIAMロールを、別のアカウントのユーザーや�
 AがBにAssumeRoleを与える場合、Aのロールを「借りている」感覚。
 https://zenn.dev/frusciante/articles/28cd351fe9de60
 
+※LaunchPermission
+AMIのLaunchPermissionプロパティを変更して、第三者のアカウントとだけ共有できるように。
+＋KMSのポリシー変更も必要。
 # ハンズオン
 ポリシーシュミレータ：作成したポリシーが適切に設定されてるか？をシミュレーションしてくれる。
 
+
+
+## 機密情報
+認証情報を取り扱いたいとき
+- AWS Secrets Manager: ライフサイクル管理可能
+- AWS Systens Nabagerパラメータストア：ライフサイクルできない
+![alt text](image.png)
